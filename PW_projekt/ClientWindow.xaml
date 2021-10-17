@@ -1,0 +1,34 @@
+﻿<Window x:Class="PW_projekt.ClientWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PW_projekt"
+        mc:Ignorable="d"
+        Title="ClientWindow" Height="559.87" Width="478.01">
+    <Grid Margin="0,0,2,0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Label Content="Pliki do przesłania" FontSize="15" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="31" Width="130"/>
+        <ListView x:Name="Files_To_Upload_View" HorizontalAlignment="Left" Height="368" Margin="10,41,0,0" VerticalAlignment="Top" Width="313">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Plik" Width="200" DisplayMemberBinding="{Binding FileName}"/>
+                    <GridViewColumn Header="Rozmiar" Width="100" DisplayMemberBinding="{Binding FileSize}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button x:Name="Upload_All_Button" Content="Wyślij" FontSize="15" HorizontalAlignment="Left" IsEnabled="False" Margin="328,41,0,0" VerticalAlignment="Top" Width="135" Height="42" Click="Upload_All_Button_Click"/>
+        <Button x:Name="Cancel_Button" Content="Wyczyść" FontSize="15" HorizontalAlignment="Left" Margin="328,88,0,0" VerticalAlignment="Top" Width="135" Height="42" Click="Cancel_Button_Click"/>
+        <TextBox x:Name="FileNameBox" HorizontalAlignment="Left" Height="23" Margin="10,466,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="130"/>
+        <Label Content="Dodawanie pliku" FontSize="15" HorizontalAlignment="Left" Margin="10,414,0,0" VerticalAlignment="Top" Height="31" Width="120" RenderTransformOrigin="-0.829,0.642"/>
+        <Label Content="Nazwa pliku" HorizontalAlignment="Left" Margin="10,440,0,0" VerticalAlignment="Top"/>
+        <Label Content="Rozmiar pliku (MB)" HorizontalAlignment="Left" Margin="140,440,0,0" VerticalAlignment="Top" Width="111"/>
+        <TextBox x:Name="FileSizeBox" HorizontalAlignment="Left" Height="23" Margin="145,466,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="130"/>
+        <Button Content="Dodaj" HorizontalAlignment="Left" Margin="280,466,0,0" VerticalAlignment="Top" Width="43" Height="23" Click="Button_Click"/>
+        <Label x:Name="Error_Label" Foreground="Red" Content="" HorizontalAlignment="Left" Margin="328,466,0,0" VerticalAlignment="Top" Height="36" Width="96"/>
+
+
+    </Grid>
+</Window>

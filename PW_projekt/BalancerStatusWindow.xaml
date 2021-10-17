@@ -1,0 +1,37 @@
+﻿<Window x:Class="PW_projekt.BalancerStatusWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PW_projekt"
+        mc:Ignorable="d"
+        Title="BalancerStatusWindow" Height="553.458" Width="859.812">
+    <Grid Margin="0,0,0,2">
+        <Label Content="0" x:Name="Queue_Count_Label" FontSize="100" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" VerticalAlignment="Top" Margin="10,10,0,0" Height="120" Width="120"/>
+        <Label x:Name="Queue_Label" Content="Oczekujących" FontSize="22" HorizontalAlignment="Left" Margin="135,37,-13,0" VerticalAlignment="Top" Height="45" Width="213"/>
+        <Label Content="5" x:Name="Free_Threads_Label" FontSize="100" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" VerticalAlignment="Top" Margin="10,153,0,0" Height="120" Width="120"/>
+        <Label x:Name="Free_Threads" Content="Wolnych wątków" FontSize="22" HorizontalAlignment="Left" Margin="130,183,-8,0" VerticalAlignment="Top" Height="45" Width="213"/>
+        <ListView x:Name="Clients_List" HorizontalAlignment="Left" Height="245" Margin="353,63,0,0" VerticalAlignment="Top" Width="479">
+            <ListView.View>
+                <GridView >
+                    <GridViewColumn Header="ID" Width="30" DisplayMemberBinding="{Binding ClientID}"/>
+                    <GridViewColumn Header="Liczba plików" Width="100" DisplayMemberBinding="{Binding FileCount}"/>
+                    <GridViewColumn Header="Czas oczekiwania" Width="100" DisplayMemberBinding="{Binding ElapsedTime}"/>
+                    <GridViewColumn Header="Rozmiary plików" Width="300" DisplayMemberBinding="{Binding FilesSizes}"/>
+                    <!--><GridViewColumn Header="Czas od w. aukcji" Width="100" DisplayMemberBinding="{Binding LastWonAuctionTimeStr}"/>
+                    <GridViewColumn Header="Wygranych" Width="70" DisplayMemberBinding="{Binding WonAuctionCount}"/><-->
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Label Content="Stan klientów" HorizontalAlignment="Left" Margin="353,37,0,0" VerticalAlignment="Top" Width="96"/>
+        <RichTextBox x:Name="AuctionLog" HorizontalAlignment="Left" Height="164" Margin="10,346,0,0" VerticalAlignment="Top" Width="338">
+            <FlowDocument>
+                <Paragraph>
+                    <Run Text=""/>
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+        <Label Content="Log aukcji" HorizontalAlignment="Left" Margin="10,315,0,0" VerticalAlignment="Top" Width="112"/>
+    </Grid>
+
+</Window>

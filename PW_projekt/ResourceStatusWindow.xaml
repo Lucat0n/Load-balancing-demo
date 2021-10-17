@@ -1,0 +1,51 @@
+﻿<Window x:Class="PW_projekt.ResourceStatusWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PW_projekt"
+        mc:Ignorable="d"
+        Title="ResourceStatusWindow" Height="373.544" Width="800">
+    <Grid>
+        <Image Source="Icons/disk.png" HorizontalAlignment="Left" Height="100" Margin="50,30,0,0" VerticalAlignment="Top" Width="100"/>
+        <Image Source="Icons/disk.png" HorizontalAlignment="Left" Height="100" Margin="200,30,0,0" VerticalAlignment="Top" Width="100"/>
+        <Image Source="Icons/disk.png" HorizontalAlignment="Left" Height="100" Margin="350,30,0,0" VerticalAlignment="Top" Width="100"/>
+        <Image Source="Icons/disk.png" HorizontalAlignment="Left" Height="100" Margin="500,30,0,0" VerticalAlignment="Top" Width="100"/>
+        <Image Source="Icons/disk.png" HorizontalAlignment="Left" Height="100" Margin="650,30,0,0" VerticalAlignment="Top" Width="100"/>
+        <Label Content="Dysk 1" FontSize="15" FontWeight="Bold" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="50,130,0,0" VerticalAlignment="Top" Width="100"/>
+        <Label Content="Dysk 2" FontSize="15" FontWeight="Bold" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="200,135,0,0" VerticalAlignment="Top" Width="100"/>
+        <Label Content="Dysk 3" FontSize="15" FontWeight="Bold" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="350,135,0,0" VerticalAlignment="Top" Width="100"/>
+        <Label Content="Dysk 4" FontSize="15" FontWeight="Bold" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="500,135,0,0" VerticalAlignment="Top" Width="100"/>
+        <Label Content="Dysk 5" FontSize="15" FontWeight="Bold" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="650,135,0,0" VerticalAlignment="Top" Width="100"/>
+        <ProgressBar x:Name="DiskProgressBar0" HorizontalAlignment="Left" Height="15" Margin="50,253,0,0" VerticalAlignment="Top" Width="100" RenderTransformOrigin="0.563,-1.545"/>
+        <ProgressBar x:Name="DiskProgressBar1" HorizontalAlignment="Left" Height="15" Margin="200,253,0,0" VerticalAlignment="Top" Width="100"/>
+        <ProgressBar x:Name="DiskProgressBar2" HorizontalAlignment="Left" Height="15" Margin="350,253,0,0" VerticalAlignment="Top" Width="100"/>
+        <ProgressBar x:Name="DiskProgressBar3" HorizontalAlignment="Left" Height="15" Margin="500,253,0,0" VerticalAlignment="Top" Width="100"/>
+        <ProgressBar x:Name="DiskProgressBar4" HorizontalAlignment="Left" Height="15" Margin="650,253,0,0" VerticalAlignment="Top" Width="100"/>
+        <!--><Label Content="Zajęte miejsce:" FontSize="13" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="50,165,0,0" VerticalAlignment="Top" Width="100"/>
+        <Label Content="Zajęte miejsce:" FontSize="13" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="200,165,0,0" VerticalAlignment="Top" Width="100"/>
+        <Label Content="Zajęte miejsce:" FontSize="13" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="350,165,0,0" VerticalAlignment="Top" Width="100" RenderTransformOrigin="2.435,0.413"/>
+        <Label Content="Zajęte miejsce:" FontSize="13" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="500,165,0,0" VerticalAlignment="Top" Width="100"/>
+        <Label Content="Zajęte miejsce:" FontSize="13" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="650,165,0,0" VerticalAlignment="Top" Width="100"/>
+        <Label x:Name="Disk1_Label" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="50,197,0,0" VerticalAlignment="Top" Width="100" Height="25"/>
+        <Label x:Name="Disk2_Label" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="200,197,0,0" VerticalAlignment="Top" Width="100" Height="25"/>
+        <Label x:Name="Disk3_Label" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="350,197,0,0" VerticalAlignment="Top" Width="100" Height="25"/>
+        <Label x:Name="Disk4_Label" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="500,197,0,0" VerticalAlignment="Top" Width="100" Height="25"/>
+        <Label x:Name="Disk5_Label" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="650,197,0,0" VerticalAlignment="Top" Width="100" Height="25"/><!-->
+        <!--><Label Content="Zajęty przez:" FontSize="13" x:Name="Occupied1_Label" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="50,165,0,0" VerticalAlignment="Top" Width="100" Height="30"/>
+        <Label Content="Zajęty przez:" FontSize="13" x:Name="Occupied2_Label" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="200,165,0,0" VerticalAlignment="Top" Width="100" Height="30"/>
+        <Label Content="Zajęty przez:" FontSize="13" x:Name="Occupied3_Label" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="350,165,0,0" VerticalAlignment="Top" Width="100" Height="30"/>
+        <Label Content="Zajęty przez:" FontSize="13" x:Name="Occupied4_Label" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="500,165,0,0" VerticalAlignment="Top" Width="100" Height="30"/>
+        <Label Content="Zajęty przez:" FontSize="13" x:Name="Occupied5_Label" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="650,165,0,0" VerticalAlignment="Top" Width="100" Height="30"/><!-->
+        <Label FontSize="13" x:Name="OccupiedList0" HorizontalAlignment="Left" Margin="50,165,0,0" HorizontalContentAlignment="Center" VerticalAlignment="Top" Width="100" Height="83"/>
+        <Label FontSize="13" x:Name="OccupiedList1" HorizontalAlignment="Left" Margin="200,170,0,0" HorizontalContentAlignment="Center" VerticalAlignment="Top" Width="100" Height="78"/>
+        <Label FontSize="13" x:Name="OccupiedList2" HorizontalAlignment="Left" Margin="350,170,0,0" HorizontalContentAlignment="Center" VerticalAlignment="Top" Width="100" Height="78"/>
+        <Label FontSize="13" x:Name="OccupiedList3" HorizontalAlignment="Left" Margin="500,170,0,0" HorizontalContentAlignment="Center" VerticalAlignment="Top" Width="100" Height="78"/>
+        <Label FontSize="13" x:Name="OccupiedList4" HorizontalAlignment="Left" Margin="650,170,0,0" HorizontalContentAlignment="Center" VerticalAlignment="Top" Width="100" Height="78"/>
+        <Label FontSize="13" x:Name="DoneLabel0" Content="" HorizontalAlignment="Left" Margin="50,273,0,0" VerticalAlignment="Top" Height="50" Width="100"/>
+        <Label FontSize="13" x:Name="DoneLabel1" Content="" HorizontalAlignment="Left" Margin="200,273,0,0" VerticalAlignment="Top" Height="50" Width="100"/>
+        <Label FontSize="13" x:Name="DoneLabel2" Content="" HorizontalAlignment="Left" Margin="350,273,0,0" VerticalAlignment="Top" Height="50" Width="100"/>
+        <Label FontSize="13" x:Name="DoneLabel3" Content="" HorizontalAlignment="Left" Margin="500,273,0,0" VerticalAlignment="Top" Height="50" Width="100"/>
+        <Label FontSize="13" x:Name="DoneLabel4" Content="" HorizontalAlignment="Left" Margin="650,273,0,0" VerticalAlignment="Top" Height="50" Width="100"/>
+    </Grid>
+</Window>
